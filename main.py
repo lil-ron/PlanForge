@@ -4,9 +4,9 @@ plans = {}
 
 # Create plan function
 def create_plan(plans):
-    planTopic = input('Give this plan a name: ')
+    planTopic = input('Give this plan a topic: ')
     while planTopic == "":
-        planTopic = input('It is required to name your plan: ')
+        planTopic = input('It is required to name your topic: ')
     # [todo] add a while loop to create more plans
     plan = {
         "planId" : str(uuid.uuid4()),
