@@ -4,25 +4,25 @@ plans = {}
 
 # Create plan function
 def create_plan(plans):
-    planTopic = input('Give this plan a topic: ')
+    planTopic = input('What is this plan about: ')
     while planTopic == "":
-        planTopic = input('It is required to name your topic: ')
+        planTopic = input('It is required to name your plan: ')
     # [todo] add a while loop to create more plans
     while True:
-            add_plan = input('What is your plan for this topic?: ')
-            more_plan = input('Do you still want to add more plans? (y/n):  ')
+            add_itinerary = input('What is your itinerary for this topic?: ')
+            more_itineraries = input('Do you still want to add more itinerary? (y/n):  ')
 
-            if more_plan == 'n':
+            if more_itineraries == 'n':
                  break
             
     plan = {
         "planId" : str(uuid.uuid4()),
         "planTopic": planTopic,
-        "plans": [
+        "itineraries": [
             {
                 "id": str(uuid.uuid4()),
-                "planName": "",
-                "planDescription": ""
+                "itineraryName": "",
+                "itineraryDescription": ""
             }
         ],
         "createdOn": datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
