@@ -10,6 +10,7 @@ def create_plan(plans):
     # [todo] add a while loop to create more plans
     while True:
             add_itinerary = input('What is your itinerary for this topic?: ')
+            add_itinerary_description = input('What is the description for this itinerary?: ')
             more_itineraries = input('Do you still want to add more itinerary? (y/n):  ')
 
             if more_itineraries == 'n':
@@ -21,8 +22,8 @@ def create_plan(plans):
         "itineraries": [
             {
                 "id": str(uuid.uuid4()),
-                "itineraryName": "",
-                "itineraryDescription": ""
+                "itineraryName": add_itinerary,
+                "itineraryDescription": add_itinerary_description
             }
         ],
         "createdOn": datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
